@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/ArtGallery/static/css/main.aeb7708e.chunk.css",
+    "main.js": "/ArtGallery/static/js/main.01c1ae42.chunk.js",
+    "main.js.map": "/ArtGallery/static/js/main.01c1ae42.chunk.js.map",
+    "runtime-main.js": "/ArtGallery/static/js/runtime-main.3bde1e38.js",
+    "runtime-main.js.map": "/ArtGallery/static/js/runtime-main.3bde1e38.js.map",
+    "static/js/2.3f246fd4.chunk.js": "/ArtGallery/static/js/2.3f246fd4.chunk.js",
+    "static/js/2.3f246fd4.chunk.js.map": "/ArtGallery/static/js/2.3f246fd4.chunk.js.map",
+    "index.html": "/ArtGallery/index.html",
+    "precache-manifest.90a041e8d72e7b41dc1a0a17fdc3f7ae.js": "/ArtGallery/precache-manifest.90a041e8d72e7b41dc1a0a17fdc3f7ae.js",
+    "service-worker.js": "/ArtGallery/service-worker.js",
+    "static/css/main.aeb7708e.chunk.css.map": "/ArtGallery/static/css/main.aeb7708e.chunk.css.map",
+    "static/js/2.3f246fd4.chunk.js.LICENSE.txt": "/ArtGallery/static/js/2.3f246fd4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3bde1e38.js",
+    "static/js/2.3f246fd4.chunk.js",
+    "static/css/main.aeb7708e.chunk.css",
+    "static/js/main.01c1ae42.chunk.js"
+  ]
+}
