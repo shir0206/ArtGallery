@@ -1,0 +1,39 @@
+ul {
+  list-style: none;
+  list-style-type: none;
+  padding-inline-start: 0px;
+}
+.gallery {
+  display: inline-block;
+  max-width: 95%;
+  max-height: 100%;
+  column-gap: 1.5em;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+@media only screen and (min-width: 1024px) {
+  .gallery {
+    column-count: 4;
+  }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .gallery {
+    column-count: 3;
+  }
+}
+
+@media only screen and (max-width: 767px) and (min-width: 1px) {
+  .gallery {
+    column-count: 2;
+  }
+}

@@ -1,0 +1,116 @@
+@media only screen and (min-width: 501px) {
+  .zoom-card-wide,
+  .art-gallery-container {
+    position: absolute;
+  }
+  .zoom-card-wide {
+    z-index: 10;
+    background-color: #fff;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    box-shadow: 2px 2px 5px rgba(51, 61, 71, 0.4);
+    border: 2px solid #c74778;
+    border-radius: 20px;
+    top: 0;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .exit-icon {
+    color: #c74778;
+    min-width: 20px;
+    text-align: right;
+    font-size: 1.25em;
+    margin-right: 0.5vw;
+    background: none;
+    cursor: pointer;
+    height: 0;
+    z-index: 20;
+    align-self: flex-end;
+  }
+
+  .exit-icon:hover {
+    transform: scale(1.2);
+    text-shadow: 2px 2px 5px rgba(51, 61, 71, 0.3);
+  }
+
+  .wide-art-gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .zoom-card-narrow,
+  .art-gallery-container {
+    position: absolute;
+  }
+  .zoom-card-narrow {
+    z-index: 10;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    max-height: 250vh;
+  }
+
+  .exit-icon {
+    color: #c74778;
+    min-width: 20px;
+    text-align: right;
+    font-size: 1.25em;
+    background: none;
+    cursor: pointer;
+    height: 0;
+    z-index: 20;
+    margin-top: 2vw;
+    margin-left: 90vw;
+  }
+}
+
+.avoid-clicks,
+.avoid-clicks *,
+.avoid-clicks > * {
+  pointer-events: none;
+  cursor: default;
+}
+
+.art-gallery-background {
+  background-color: #fff;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+
+.no-scroll {
+  overflow-y: hidden;
+  height: 95vh;
+}
+
+.avoid-clicks,
+.avoid-clicks *,
+.avoid-clicks > * {
+  pointer-events: none;
+  cursor: default;
+}
+
+.background {
+  background-color: #fff;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
