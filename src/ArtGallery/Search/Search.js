@@ -1,9 +1,17 @@
-import React, { useState } from "react";
-// import "./styles.css";
+import React, { useState, useEffect } from "react";
 import "./search.css";
 
-export const Search = props => {
+export const Search = (props) => {
   const [search, setSearch] = useState(props.search);
+
+  // const [search, setSearch] = useState();
+
+  useEffect(
+    () => {
+      setSearch(props.search.charAt(0).toUpperCase() + props.search.slice(1));
+    },
+    [props.search] // Occurs when the state within is changing
+  );
 
   /**
    * When occrs event 'onChange' in the search input,
@@ -19,7 +27,17 @@ export const Search = props => {
     props.handleSearch(searchText);
   }
 
-  const updateSearchOnSubmit = e => {
+  function deleteSearch() {
+    console.log(123);
+    // Get the search text when occurs event 'delete search'
+    let searchText = "";
+    setSearch(searchText);
+
+    // Update the parent's props {handleSearch} with the search text
+    props.handleSearch(searchText);
+  }
+
+  const updateSearchOnSubmit = (e) => {
     e.preventDefault();
     props.handleSearch(search);
   };
@@ -32,9 +50,13 @@ export const Search = props => {
           id="searchInput"
           className="search-input"
           onChange={updateSearch}
-          placeholder="What are you looking for?"
-          value={props.search.charAt(0).toUpperCase() + props.search.slice(1)}
+          placeholder="Search"
+          // value={props.search.charAt(0).toUpperCase() + props.search.slice(1)}
+          value={search}
         />
+        {search && (
+          <i className="fas fa-times delete-icon" onClick={deleteSearch} />
+        )}
       </form>
     </div>
   );

@@ -26,6 +26,13 @@
   color: #c74778;
 }
 
+.delete-icon {
+  font-size: 1em;
+  padding: 0.2em;
+  color: #c74778;
+  cursor: pointer;
+}
+
 .search-input {
   outline: none;
   border: none;
@@ -33,7 +40,7 @@
   caret-color: #c74778;
   font-size: 1em;
   font-family: Calibri;
-  width: calc(100% - 16px);
+  width: calc(100% - 36px);
   box-sizing: border-box;
 }
 
