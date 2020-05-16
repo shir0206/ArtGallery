@@ -1,12 +1,12 @@
 import React, { useState, useCallback } from "react";
 import "./nav.css";
 import { Search } from "../Search/Search";
-export const Nav = props => {
+export const Nav = (props) => {
   const [search, setSearch] = useState(props.search);
   console.log("inside nav", props.search);
   // Recieve search data from Search component, init search state
   const recieveSearchText = useCallback(
-    propsChild => {
+    (propsChild) => {
       // Update searched text in the state
       setSearch(props);
 
@@ -28,10 +28,14 @@ export const Nav = props => {
       <Search search={props.search} handleSearch={recieveSearchText} />
       <div id="iconsContainer" className="icons-container">
         <div id="homeIconContainer" className="icon-container">
-          <i id="home" className="fa fa-home icon bar-icon" />
+          <a href="https://shir0206.github.io/ShirWeb/">
+            <i id="home" className="fa fa-home icon bar-icon" />
+          </a>
         </div>
         <div id="contactIconContainer" className="icon-container">
-          <i id="contact" className="fa fa-envelope icon bar-icon" />
+          <a href="mailto:shir0206@gmail.com">
+            <i id="contact" className="fa fa-envelope icon bar-icon" />
+          </a>
         </div>
       </div>
     </div>
