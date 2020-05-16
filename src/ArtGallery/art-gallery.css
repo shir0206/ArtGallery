@@ -4,6 +4,8 @@
     position: absolute;
   }
   .zoom-card-wide {
+    max-height: 90vh;
+    max-width: 90vw;
     z-index: 10;
     background-color: #fff;
     padding: 1%;
@@ -26,6 +28,7 @@
     min-width: 20px;
     text-align: right;
     font-size: 1.25em;
+    margin-top: 0.5vw;
     margin-right: 0.5vw;
     background: none;
     cursor: pointer;
