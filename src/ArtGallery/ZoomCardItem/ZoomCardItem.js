@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useCallback } from "react";
 import "./zoom-card-item.css";
-import firebase from "../../Firebase/firebase"
+import firebase from "../../Firebase/firebase";
 import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
 
-export const ZoomCardItem = props => {
+export const ZoomCardItem = (props) => {
   const card = props.card;
 
   //Like state
   const [dislikeClassName, setDislikeClassName] = useState(false);
-  const [dislikeCounter, setDislikeCounter] = useState(function() {
+  const [dislikeCounter, setDislikeCounter] = useState(function () {
     return parseInt(props.card.likes, 10);
   });
 
   //Dislike state
   const [likeClassName, setLikeClassName] = useState(false);
-  const [likeCounter, setLikeCounter] = useState(function() {
+  const [likeCounter, setLikeCounter] = useState(function () {
     return parseInt(props.card.likes, 10);
   });
 
@@ -56,7 +56,7 @@ export const ZoomCardItem = props => {
     firebase
       .database()
       .ref()
-      .update(updates, function(error) {
+      .update(updates, function (error) {
         if (error) {
           // alert("add like failed");
           return false;
@@ -76,7 +76,7 @@ export const ZoomCardItem = props => {
     firebase
       .database()
       .ref()
-      .update(updates, function(error) {
+      .update(updates, function (error) {
         if (error) {
           // alert("add like failed");
           return false;
@@ -93,7 +93,7 @@ export const ZoomCardItem = props => {
 
   // Recieve search data from Search component, init search state
   const recieveTagText = useCallback(
-    childProps => {
+    (childProps) => {
       console.log("inside recieveTagText", childProps);
       // Update searched text in the state
       setSearch(childProps);
@@ -158,6 +158,7 @@ export const ZoomCardItem = props => {
                     : "fa fa-heart like-icon "
                 }
                 onClick={handleLike}
+                onAnimationEnd={() => setLikeClassName(!likeClassName)}
               />
               <p id="likes">{likeCounter}</p>
             </div>
@@ -169,6 +170,8 @@ export const ZoomCardItem = props => {
                     : "fas fa-heart-broken dislike-icon"
                 }
                 onClick={handleDislike}
+                onAnimationEnd={() => setDislikeClassName(!dislikeClassName)}
+
               />
               <p id="dislikes" className="dislikes">
                 {dislikeCounter}
@@ -182,7 +185,7 @@ export const ZoomCardItem = props => {
 };
 
 function createTagsList(tags, recieveTagText) {
-  let tagsList = tags.map(i => (
+  let tagsList = tags.map((i) => (
     <Tag currentTag={i} key={i} handleTagSearch={recieveTagText} />
   ));
   return tagsList;
