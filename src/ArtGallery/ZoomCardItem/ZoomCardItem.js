@@ -126,9 +126,6 @@ function Like(props) {
     setLikeCounter(parseInt(props.card.likes, 10));
   }, [props]);
 
-  function handleLike() {
-    updateLikeDB();
-  }
 
   function updateLikeDB() {
     var updates = {};
@@ -156,7 +153,7 @@ function Like(props) {
             ? "fa fa-heart like-icon like-icon-anim"
             : "fa fa-heart like-icon "
         }
-        onClick={handleLike}
+        onClick={updateLikeDB}
         onAnimationEnd={() => setLikeClassName(!likeClassName)}
       />
       <p id="likes">{likeCounter}</p>
@@ -179,10 +176,6 @@ function Dislike(props) {
   useEffect(() => {
     setDislikeCounter(parseInt(props.card.dislikes, 10));
   }, [props]);
-
-  function handleDislike() {
-    updateDislikeDB();
-  }
 
   function updateDislikeDB() {
     var updates = {};
@@ -210,7 +203,7 @@ function Dislike(props) {
             ? "fas fa-heart-broken dislike-icon dislike-icon-anim"
             : "fas fa-heart-broken dislike-icon"
         }
-        onClick={handleDislike}
+        onClick={updateDislikeDB}
         onAnimationEnd={() => setDislikeClassName(!dislikeClassName)}
       />
       <p id="dislikes" className="dislikes">
