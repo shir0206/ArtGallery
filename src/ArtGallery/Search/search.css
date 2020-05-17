@@ -6,7 +6,7 @@
   border-radius: 20px;
   background: #f1f3f5;
   overflow: hidden;
-  width: 100%;
+  width: 80vw;
   border-color: white;
 }
 
@@ -29,6 +29,7 @@
 .delete-icon {
   font-size: 1em;
   padding: 0.2em;
+  margin-right: 0.2em;
   color: #c74778;
   cursor: pointer;
 }

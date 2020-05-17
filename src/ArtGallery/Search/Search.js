@@ -54,10 +54,10 @@ export const Search = (props) => {
           // value={props.search.charAt(0).toUpperCase() + props.search.slice(1)}
           value={search}
         />
-        {search && (
-          <i className="fas fa-times delete-icon" onClick={deleteSearch} />
-        )}
       </form>
+      {search && (
+        <i className="fas fa-times delete-icon" onClick={deleteSearch} />
+      )}
     </div>
   );
 };

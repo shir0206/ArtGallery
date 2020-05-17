@@ -28,7 +28,7 @@
     min-width: 20px;
     text-align: right;
     font-size: 1.25em;
-    margin-top: 1vw;
+    padding-top: 0.5vw;
     margin-right: 0.5vw;
     background: none;
     cursor: pointer;
