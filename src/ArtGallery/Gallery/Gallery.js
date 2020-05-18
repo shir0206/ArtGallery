@@ -16,7 +16,7 @@ export const Gallery = props => {
       setClickedCard(card);
       props.handleGalleryClickedCard(card);
     },
-    [] //[clickedCard]
+    [] 
   );
 
   useEffect(

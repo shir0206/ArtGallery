@@ -34,6 +34,13 @@
   cursor: pointer;
 }
 
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
 .search-input {
   outline: none;
   border: none;

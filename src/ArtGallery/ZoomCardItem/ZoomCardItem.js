@@ -126,7 +126,6 @@ function Like(props) {
     setLikeCounter(parseInt(props.card.likes, 10));
   }, [props]);
 
-
   function updateLikeDB() {
     var updates = {};
     updates["/Cards/" + card.id + "/likes"] = likeCounter + 1;
@@ -187,7 +186,7 @@ function Dislike(props) {
         if (error) {
           return false;
         } else {
-          // Data saved successfully, update the view of the likes counter
+          // Data saved successfully, update the view of the dislikes counter
           setDislikeClassName(!dislikeClassName);
           setDislikeCounter(dislikeCounter + 1);
           return true;

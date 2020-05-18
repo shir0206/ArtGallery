@@ -8,7 +8,7 @@ var firebaseConfig = {
   storageBucket: "artgallery-4c02e.appspot.com",
   messagingSenderId: "955387804026",
   appId: "1:955387804026:web:d9fa5f3954d08b61983ec3",
-  measurementId: "G-E986Y4Q017"
+  measurementId: "G-E986Y4Q017",
 };
 // Initialize Firebase
 try {

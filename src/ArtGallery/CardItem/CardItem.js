@@ -31,14 +31,11 @@ function Card(props) {
   );
 }
 
-export const CardItem = props => {
-  //const [clickedCard, setClickedCard] = useState([]);
-
+export const CardItem = (props) => {
   function updateCardDetailsOnClick(e) {
     e.preventDefault();
 
     let card = props.currentCard;
-    // setClickedCard(card);
 
     props.handleClickedCard(card);
   }

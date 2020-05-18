@@ -9,7 +9,7 @@ import { ZoomCardItem } from "./ZoomCardItem/ZoomCardItem";
 
 import "./art-gallery.css";
 
-export const ArtGallery = props => {
+export const ArtGallery = (props) => {
   const [lock, setLock] = useState(false);
   const [search, setSearch] = useState("");
   const [card, setCard] = useState([]);
@@ -30,7 +30,7 @@ export const ArtGallery = props => {
 
   // Recieve search data from Nav component, init search state
   const recieveNavSearchText = useCallback(
-    props => {
+    (props) => {
       // Update searched text in the state
       setSearch(props);
     },
@@ -38,7 +38,7 @@ export const ArtGallery = props => {
   );
 
   const recieveTagSearchText = useCallback(
-    props => {
+    (props) => {
       // Update searched text in the state
 
       setLock(false);
@@ -49,13 +49,13 @@ export const ArtGallery = props => {
   );
 
   const recieveCardDetails = useCallback(
-    propsChild => {
+    (propsChild) => {
       let cardId = propsChild.id;
       console.log("from recieveCardDetails", cardId);
 
       recieveCardFromDB(cardId);
     },
-    [] //card
+    [] 
   );
 
   function recieveCardFromDB(cardId) {
@@ -63,7 +63,7 @@ export const ArtGallery = props => {
     firebase
       .database()
       .ref("/Cards/" + cardId)
-      .once("value", querySnapShot => {
+      .once("value", (querySnapShot) => {
         let data = querySnapShot.val() ? querySnapShot.val() : {};
         let card = { ...data };
 

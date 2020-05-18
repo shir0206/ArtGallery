@@ -1,6 +1,7 @@
 .icons-container {
   display: flex;
 }
+
 .nav-container {
   display: flex;
   flex-direction: row;
@@ -35,6 +36,7 @@
   height: 100%;
   top: 0;
 }
+
 .bar-icon {
   font-size: 150%;
   margin: 1vw;

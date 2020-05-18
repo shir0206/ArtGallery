@@ -4,8 +4,6 @@ import "./search.css";
 export const Search = (props) => {
   const [search, setSearch] = useState(props.search);
 
-  // const [search, setSearch] = useState();
-
   useEffect(
     () => {
       setSearch(props.search.charAt(0).toUpperCase() + props.search.slice(1));
@@ -28,7 +26,6 @@ export const Search = (props) => {
   }
 
   function deleteSearch() {
-    console.log(123);
     // Get the search text when occurs event 'delete search'
     let searchText = "";
     setSearch(searchText);
@@ -51,13 +48,18 @@ export const Search = (props) => {
           className="search-input"
           onChange={updateSearch}
           placeholder="Search"
-          // value={props.search.charAt(0).toUpperCase() + props.search.slice(1)}
           value={search}
         />
       </form>
-      {search && (
-        <i className="fas fa-times delete-icon" onClick={deleteSearch} />
-      )}
+
+      <i
+        className={
+          search
+            ? "fas fa-times delete-icon show"
+            : "fas fa-times delete-icon hide"
+        }
+        onClick={deleteSearch}
+      />
     </div>
   );
 };

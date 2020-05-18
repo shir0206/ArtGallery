@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from "react";
-// import "./styles.css";
 import "./floating-arrow.css";
 
 export const FloatingArrow = () => {

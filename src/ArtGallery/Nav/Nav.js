@@ -1,9 +1,12 @@
 import React, { useState, useCallback } from "react";
 import "./nav.css";
 import { Search } from "../Search/Search";
+import logo from "../../logo.png";
+
 export const Nav = (props) => {
+
   const [search, setSearch] = useState(props.search);
-  console.log("inside nav", props.search);
+
   // Recieve search data from Search component, init search state
   const recieveSearchText = useCallback(
     (propsChild) => {
@@ -14,11 +17,8 @@ export const Nav = (props) => {
       // (ArtGallery component - Search grandparent component)
       props.handleNavSearch(propsChild);
     },
-    [] //search
+    [] 
   );
-
-  const logo =
-    "https://avatars1.githubusercontent.com/u/40990488?s=460&u=746bedd30b0b1172e701889d5bd9159465b93909&v=4";
 
   return (
     <div id="navContainer" className="nav-container">

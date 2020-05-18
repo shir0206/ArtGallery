@@ -3,6 +3,7 @@ ul {
   list-style-type: none;
   padding-inline-start: 0px;
 }
+
 .gallery {
   display: inline-block;
   max-width: 95%;
