@@ -48,15 +48,12 @@ export const ArtGallery = (props) => {
     [] //search
   );
 
-  const recieveCardDetails = useCallback(
-    (propsChild) => {
-      let cardId = propsChild.id;
-      console.log("from recieveCardDetails", cardId);
+  const recieveCardDetails = useCallback((propsChild) => {
+    let cardId = propsChild.id;
+    console.log("from recieveCardDetails", cardId);
 
-      recieveCardFromDB(cardId);
-    },
-    [] 
-  );
+    recieveCardFromDB(cardId);
+  }, []);
 
   function recieveCardFromDB(cardId) {
     // DB Request, extract all the data from Firebase
