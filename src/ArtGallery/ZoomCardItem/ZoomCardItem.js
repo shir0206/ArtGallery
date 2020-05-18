@@ -24,7 +24,6 @@ export const ZoomCardItem = (props) => {
   const tagsList = createTagsList(card.tags, recieveTagText);
 
   return (
-    // <div className="zoom-wrapper">
       <div className="zoom-container">
         <ZoomImage card={card} />
         <div id="detailsContainer" className="details-container">
@@ -43,7 +42,6 @@ export const ZoomCardItem = (props) => {
           </div>
         </div>
       </div>
-    // </div>
   );
 };
 
