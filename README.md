@@ -13,3 +13,7 @@ Website to showcase my art, including dynamic search of keywords and tags.
 
 
 
+<p align="center">
+<img  src="https://user-images.githubusercontent.com/40990488/84259006-82347300-ab20-11ea-8e73-bc32d28ae596.gif" alt="ArtGallery"/>
+</p>
+
