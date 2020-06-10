@@ -3,7 +3,7 @@
 Website to showcase my art, including dynamic search of keywords and tags.
 
 
-<b>Doveloped via the technologies:</b> JS, React + Hooks, HTML, CSS, Firebase & incorporated third party libraries.
+<b>Doveloped via the technologies:</b> React.js + Hooks, HTML, CSS, Firebase & incorporated third party libraries.
 
 
 
